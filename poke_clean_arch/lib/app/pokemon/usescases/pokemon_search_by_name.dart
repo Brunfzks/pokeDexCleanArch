@@ -8,9 +8,9 @@ abstract class IPokemonSearch {
       ParamsSearchPokemon params);
 }
 
-class PokemonSearch implements IPokemonSearch {
+class PokemonSearchByName implements IPokemonSearch {
   PokemonRepository repository;
-  PokemonSearch({
+  PokemonSearchByName({
     required this.repository,
   });
 

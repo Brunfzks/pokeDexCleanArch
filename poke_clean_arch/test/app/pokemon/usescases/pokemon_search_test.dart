@@ -22,7 +22,7 @@ class PokemonRepositoryMock implements PokemonRepository {
 
 void main() {
   final repository = PokemonRepositoryMock();
-  final useCases = PokemonSearch(repository: repository);
+  final useCases = PokemonSearchByName(repository: repository);
   test('Deve Retornar um pokemon', () async {
     final result = await useCases(ParamsSearchPokemon(nameText: 'Jolteon'));
     expect(result.isRight(), true);
