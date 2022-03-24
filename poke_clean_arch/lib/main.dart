@@ -1,12 +1,14 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kiwi/kiwi.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/entities/pokemon.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/repository/pokemon_repository.dart';
 import 'package:poke_clean_arch/app/pokemon/external/poke_api/pokemon_api_impl.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/datasource/pokemon_datasource.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/repositories/pokemon_repository_impl.dart';
-import 'package:poke_clean_arch/app/pokemon/presenter/pokemon_search_page.dart';
+import 'package:poke_clean_arch/app/pokemon/presenter/pokemon_search_view/pokemon_search_controller.dart';
+import 'package:poke_clean_arch/app/pokemon/presenter/pokemon_search_view/pokemon_search_page.dart';
 import 'package:poke_clean_arch/app/pokemon/usescases/pokemon_search_by_name.dart';
 
 final container = KiwiContainer()
@@ -17,6 +19,9 @@ final container = KiwiContainer()
   ..registerFactory<PokemonDataSource>(
       (container) => PokemonApi(dio: container.resolve()))
   ..registerFactory<Dio>((container) => Dio());
+
+PokemonSearchController pokemonSearchController =
+    Get.put(PokemonSearchController());
 
 void main() async {
   final usescase = container.resolve<PokemonSearchByName>();
