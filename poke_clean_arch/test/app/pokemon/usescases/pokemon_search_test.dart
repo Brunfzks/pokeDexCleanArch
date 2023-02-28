@@ -3,7 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/entities/pokemon.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/errors/erros.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/repository/pokemon_repository.dart';
-import 'package:poke_clean_arch/app/pokemon/usescases/pokemon_search_by_name.dart';
+import 'package:poke_clean_arch/app/pokemon/usescases/pokemon_search_by_name/pokemon_search_by_name.dart';
+import 'package:poke_clean_arch/app/pokemon/usescases/pokemon_search_infinity/pokemon_search_infinity.dart';
 
 class PokemonRepositoryMock implements PokemonRepository {
   @override
@@ -17,6 +18,21 @@ class PokemonRepositoryMock implements PokemonRepository {
       id: 1,
       frontImg: 'C:/Pokemon/Jolteon',
     ));
+  }
+
+  @override
+  Future<Either<PokemonSearchException, List<Pokemon>>> pokemonSearchInfinity(
+      ParamsSearchInfinityPokemon params) async {
+    if (params.limit == 1000) {
+      return Left(PokemonSearchException(message: 'Repository Erro'));
+    }
+    return Right([
+      Pokemon(
+        name: 'Jolteon',
+        id: 1,
+        frontImg: 'C:/Pokemon/Jolteon',
+      )
+    ]);
   }
 }
 

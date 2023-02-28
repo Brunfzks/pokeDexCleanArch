@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'package:poke_clean_arch/app/pokemon/domain/entities/pokemon.dart';
+import 'package:poke_clean_arch/app/pokemon/domain/entities/type.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/types_model.dart';
 
 class PokemonModel implements Pokemon {
   @override
@@ -9,10 +11,14 @@ class PokemonModel implements Pokemon {
   final int id;
   @override
   final String frontImg;
+  @override
+  final List<TypeModel> types;
+
   const PokemonModel({
     required this.name,
     required this.id,
     required this.frontImg,
+    required this.types,
   });
 
   Map<String, dynamic> toMap() {
@@ -20,6 +26,7 @@ class PokemonModel implements Pokemon {
       'name': name,
       'id': id,
       'frontImg': frontImg,
+      'types': types.map((x) => x.toMap()).toList(),
     };
   }
 
@@ -28,7 +35,22 @@ class PokemonModel implements Pokemon {
       name: map['name'] ?? '',
       id: map['id']?.toInt() ?? 0,
       frontImg: map['sprites']['front_default'] ?? '',
+      types:
+          List<TypeModel>.from(map['types']?.map((x) => TypeModel.fromMap(x))),
     );
+  }
+
+  static String retornaIdTratado(String id) {
+    var aux = id.length;
+
+    switch (aux) {
+      case 1:
+        return '#00$id';
+      case 2:
+        return '#0$id';
+      default:
+        return '#$id';
+    }
   }
 
   String toJson() => json.encode(toMap());
