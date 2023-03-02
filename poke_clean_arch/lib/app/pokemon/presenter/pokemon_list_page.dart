@@ -118,7 +118,7 @@ class ListItem extends StatelessWidget {
     required this.index,
   }) : super(key: key);
 
-  final Pokemon pokemon;
+  final PokemonModel pokemon;
   final int index;
 
   @override

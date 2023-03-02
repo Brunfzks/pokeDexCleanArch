@@ -11,7 +11,15 @@ class PokemonSearchState extends Equatable {
 
   factory PokemonSearchState.initial() {
     return PokemonSearchState(
-      pokemon: Pokemon(name: '', id: 0, frontImg: '', types: []),
+      pokemon: Pokemon(
+        name: '',
+        id: 0,
+        frontImg: '',
+        types: [],
+        abilities: [],
+        height: 0,
+        weight: 0,
+      ),
     );
   }
 

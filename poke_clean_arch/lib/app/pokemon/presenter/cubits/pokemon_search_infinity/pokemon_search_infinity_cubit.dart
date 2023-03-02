@@ -4,6 +4,7 @@ import 'package:equatable/equatable.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/entities/pokemon.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/errors/erros.dart';
 import 'package:poke_clean_arch/app/pokemon/external/poke_api/pokemon_api_impl.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/pokemon_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/repositories/pokemon_repository_impl.dart';
 import 'package:poke_clean_arch/app/pokemon/usescases/pokemon_search_infinity/pokemon_search_infinity.dart';
 
@@ -31,7 +32,7 @@ class PokemonSearchInfinityCubit extends Cubit<PokemonSearchInfinityState> {
                   error: exception.message,
                 ),
               )
-            }, (List<Pokemon> pokemon) {
+            }, (List<PokemonModel> pokemon) {
       emit(
         state.copyWith(
           pokemon: pokemon,
@@ -63,7 +64,7 @@ class PokemonSearchInfinityCubit extends Cubit<PokemonSearchInfinityState> {
                   error: exception.message,
                 ),
               )
-            }, (List<Pokemon> pokemon) {
+            }, (List<PokemonModel> pokemon) {
       state.pokemon.addAll(pokemon);
       emit(
         state.copyWith(

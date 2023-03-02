@@ -13,7 +13,7 @@ class PokemonApi implements PokemonDataSource {
     required this.dio,
   });
   @override
-  Future<Pokemon> pokemonSearchByName(ParamsSearchPokemon params) async {
+  Future<PokemonModel> pokemonSearchByName(ParamsSearchPokemon params) async {
     var result = await Dio()
         .get('https://pokeapi.co/api/v2/pokemon/${params.nameText}/');
     if (result.statusCode == 200) {
@@ -27,14 +27,14 @@ class PokemonApi implements PokemonDataSource {
   }
 
   @override
-  Future<List<Pokemon>> pokemonSearchInfinity(
+  Future<List<PokemonModel>> pokemonSearchInfinity(
       ParamsSearchInfinityPokemon params) async {
     try {
       var result = await Dio().get(
           'https://pokeapi.co/api/v2/pokemon?limit=${params.limit ?? 100}&offset=${params.offset ?? 0}');
       if (result.statusCode == 200) {
         var json = result.data['results'];
-        List<Pokemon> listPokemon = [];
+        List<PokemonModel> listPokemon = [];
         for (var pokemon in json) {
           listPokemon.add(await pokemonSearchByName(
               ParamsSearchPokemon(nameText: pokemon['name'])));

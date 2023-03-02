@@ -3,7 +3,7 @@ part of 'pokemon_search_infinity_cubit.dart';
 enum PokeStatus { initial, completed, error, loading, loadingMock }
 
 class PokemonSearchInfinityState extends Equatable {
-  final List<Pokemon> pokemon;
+  final List<PokemonModel> pokemon;
   final PokeStatus status;
 
   final String error;
@@ -15,8 +15,18 @@ class PokemonSearchInfinityState extends Equatable {
   });
 
   factory PokemonSearchInfinityState.initial() {
-    return PokemonSearchInfinityState(
-      pokemon: [Pokemon(name: '', id: 0, frontImg: '', types: [])],
+    return const PokemonSearchInfinityState(
+      pokemon: [
+        PokemonModel(
+          name: '',
+          id: 0,
+          frontImg: '',
+          types: [],
+          abilities: [],
+          height: 0,
+          weight: 0,
+        )
+      ],
       status: PokeStatus.initial,
       error: '',
     );
@@ -27,7 +37,7 @@ class PokemonSearchInfinityState extends Equatable {
       'PokemonSearchInfinityState(pokemon: $pokemon, status: $status, error: $error)';
 
   PokemonSearchInfinityState copyWith({
-    List<Pokemon>? pokemon,
+    List<PokemonModel>? pokemon,
     PokeStatus? status,
     String? error,
   }) {
