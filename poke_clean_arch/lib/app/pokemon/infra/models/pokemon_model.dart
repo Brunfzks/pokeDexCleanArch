@@ -1,10 +1,12 @@
 import 'dart:convert';
 
 import 'package:basic_utils/basic_utils.dart';
+
 import 'package:poke_clean_arch/app/pokemon/domain/entities/Ability.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/entities/pokemon.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/entities/type.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/ability_model.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/move_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/types_model.dart';
 
 class PokemonModel implements Pokemon {
@@ -22,6 +24,8 @@ class PokemonModel implements Pokemon {
   final double height;
   @override
   final double weight;
+  @override
+  final List<MoveModel> moves;
 
   const PokemonModel({
     required this.name,
@@ -31,6 +35,7 @@ class PokemonModel implements Pokemon {
     required this.abilities,
     required this.height,
     required this.weight,
+    required this.moves,
   });
 
   static String retornaIdTratado(String id) {
@@ -65,6 +70,7 @@ class PokemonModel implements Pokemon {
       'abilities': abilities.map((x) => x.toMap()).toList(),
       'height': height,
       'weight': weight,
+      'moves': moves.map((x) => x.toMap()).toList(),
     };
   }
 
@@ -77,8 +83,10 @@ class PokemonModel implements Pokemon {
           List<TypeModel>.from(map['types']?.map((x) => TypeModel.fromMap(x))),
       abilities: List<AbilityModel>.from(
           map['abilities']?.map((x) => AbilityModel.fromMap(x))),
-      height: map['height']?.toDouble() / 10 ?? 0.0,
-      weight: map['weight']?.toDouble() / 10 ?? 0.0,
+      height: map['height']?.toDouble() ?? 0.0,
+      weight: map['weight']?.toDouble() ?? 0.0,
+      moves:
+          List<MoveModel>.from(map['moves']?.map((x) => MoveModel.fromMap(x))),
     );
   }
 

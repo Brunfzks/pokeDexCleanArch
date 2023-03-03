@@ -1,5 +1,6 @@
 import 'package:poke_clean_arch/app/pokemon/domain/entities/Ability.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/ability_model.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/move_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/types_model.dart';
 
 class Pokemon {
@@ -10,6 +11,7 @@ class Pokemon {
   final double weight;
   final List<TypeModel> types;
   final List<AbilityModel> abilities;
+  final List<MoveModel> moves;
 
   Pokemon({
     required this.name,
@@ -19,5 +21,6 @@ class Pokemon {
     required this.abilities,
     required this.height,
     required this.weight,
+    required this.moves,
   });
 }

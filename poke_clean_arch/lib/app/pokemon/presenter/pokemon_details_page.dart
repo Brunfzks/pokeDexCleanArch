@@ -149,6 +149,8 @@ class About extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
@@ -161,58 +163,97 @@ class About extends StatelessWidget {
             textAlign: TextAlign.left,
             style: GoogleFonts.roboto(
               color: Colors.black87,
+              wordSpacing: 2,
               fontSize: 14,
             ),
           ),
           const SizedBox(
             height: 30,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 30, right: 30),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                infoBio('${pokemon.weight.toString()} Kg', 'Weight'),
-                infoBio('${pokemon.height.toString()} m', 'Height'),
-              ],
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              infoBio('${pokemon.weight.toString()} Kg', 'Weight'),
+              infoBio('${pokemon.height.toString()} m', 'Height'),
+            ],
           ),
           const SizedBox(
-            height: 30,
+            height: 70,
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(left: 30, right: 30),
+              padding: const EdgeInsets.only(left: 30),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: GridView.builder(
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                        ),
-                        itemCount: pokemon.types.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return SizedBox(
-                            width: 30,
-                            child: SvgPicture.asset(
-                              pokemon.types[index].urlPicture,
-                              width: 15,
-                              color: pokemon.types[index].colorType,
-                              fit: BoxFit.contain,
+                  Padding(
+                    padding: EdgeInsets.only(left: width * 0.15),
+                    child: SizedBox(
+                      width: 50,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: 30,
+                            child: GridView.builder(
+                                gridDelegate:
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                ),
+                                itemCount: pokemon.types.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return SizedBox(
+                                    width: 15,
+                                    child: SvgPicture.asset(
+                                      pokemon.types[index].urlPicture,
+                                      width: 15,
+                                      color: pokemon.types[index].colorType,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  );
+                                }),
+                          ),
+                          Expanded(
+                            child: Text(
+                              'Category',
+                              style: GoogleFonts.roboto(
+                                color: Colors.black87,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 11,
+                              ),
                             ),
-                          );
-                        }),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                   Expanded(
-                    child: Text(
-                      pokemon.retornaAbilities(),
-                      style: GoogleFonts.roboto(
-                        color: Colors.black87,
-                        fontSize: 14,
-                      ),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 11),
+                          child: Text(
+                            pokemon.retornaAbilities(),
+                            style: GoogleFonts.roboto(
+                              color: Colors.black87,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            'Ability',
+                            style: GoogleFonts.roboto(
+                              color: Colors.black87,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 11,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -242,9 +283,9 @@ Widget infoBio(String weight, height) {
       Text(
         height,
         style: GoogleFonts.roboto(
-          color: Colors.black45,
+          color: Colors.black87,
           fontWeight: FontWeight.normal,
-          fontSize: 13,
+          fontSize: 11,
         ),
       ),
     ],

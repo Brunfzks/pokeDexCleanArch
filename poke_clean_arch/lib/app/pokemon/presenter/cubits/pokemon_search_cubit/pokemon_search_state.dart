@@ -19,6 +19,7 @@ class PokemonSearchState extends Equatable {
         abilities: [],
         height: 0,
         weight: 0,
+        moves: [],
       ),
     );
   }
