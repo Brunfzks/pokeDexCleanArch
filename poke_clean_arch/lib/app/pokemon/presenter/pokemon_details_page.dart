@@ -230,7 +230,7 @@ class About extends StatelessWidget {
             height: 15,
           ),
           Text(
-            specie.flavorTextEntries[0].flavorText,
+            specie.flavorTextEntries[0].flavorText.replaceAll('\n', ' '),
             textAlign: TextAlign.left,
             style: GoogleFonts.roboto(
               color: Colors.black87,
@@ -245,7 +245,7 @@ class About extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               (pokemon.weight / 10) < 1
-                  ? infoBio('${(pokemon.weight * 100).toString()} g', 'Weight')
+                  ? infoBio('${(pokemon.weight * 1000).toString()} g', 'Weight')
                   : infoBio('${(pokemon.weight / 10).toString()} Kg', 'Weight'),
               (pokemon.height / 10) < 1
                   ? infoBio('${(pokemon.height * 10).toString()} cm', 'Height')
