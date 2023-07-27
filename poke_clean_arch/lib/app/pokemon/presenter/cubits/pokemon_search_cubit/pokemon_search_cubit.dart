@@ -4,6 +4,9 @@ import 'package:equatable/equatable.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/entities/pokemon.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/errors/erros.dart';
 import 'package:poke_clean_arch/app/pokemon/external/poke_api/pokemon_api_impl.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/named_api_resource_model.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/official_artwork_model.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/sprites_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/repositories/pokemon_repository_impl.dart';
 import 'package:poke_clean_arch/app/pokemon/usescases/pokemon_search_by_name/pokemon_search_by_name.dart';
 

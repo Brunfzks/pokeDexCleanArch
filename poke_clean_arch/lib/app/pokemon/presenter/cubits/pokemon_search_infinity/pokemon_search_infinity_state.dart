@@ -15,17 +15,27 @@ class PokemonSearchInfinityState extends Equatable {
   });
 
   factory PokemonSearchInfinityState.initial() {
-    return const PokemonSearchInfinityState(
+    return PokemonSearchInfinityState(
       pokemon: [
         PokemonModel(
           name: '',
           id: 0,
-          frontImg: '',
+          sprites: PokemonSpritesModel(
+            backDefault: '',
+            backShiny: '',
+            frontDefault: '',
+            frontShiny: '',
+            officialArtwork: OfficialArtworkModel(
+              frontDefault: '',
+              frontShiny: '',
+            ),
+          ),
           types: [],
           abilities: [],
           height: 0,
           weight: 0,
           moves: [],
+          species: NamedApiResourceModel(name: '', url: ''),
         )
       ],
       status: PokeStatus.initial,

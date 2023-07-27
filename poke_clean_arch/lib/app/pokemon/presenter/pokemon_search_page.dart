@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/cubits/pokemon_search_cubit/pokemon_search_cubit.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/cubits/pokemon_search_infinity/pokemon_search_infinity_cubit.dart';
-import 'package:poke_clean_arch/app/pokemon/presenter/pokemon_list_page.dart';
 
 // ignore: must_be_immutable
 class PokemonSearchPage extends StatelessWidget {
@@ -36,7 +35,12 @@ class PokemonSearchPage extends StatelessWidget {
                     context.watch<PokemonSearchCubit>().state.pokemon.name,
                   ),
                   Image.network(
-                    context.watch<PokemonSearchCubit>().state.pokemon.frontImg,
+                    context
+                        .watch<PokemonSearchCubit>()
+                        .state
+                        .pokemon
+                        .sprites
+                        .frontDefault,
                   )
                 ],
               );

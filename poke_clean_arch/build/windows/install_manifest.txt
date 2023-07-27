@@ -1,6 +1,7 @@
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/icudtl.dat
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/flutter_windows.dll
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/AssetManifest.smcbin
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/assets/loading.json
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/assets/pokebola-fundo-01.png
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/assets/types/bug.svg
@@ -24,6 +25,7 @@ C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/ru
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/NOTICES
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

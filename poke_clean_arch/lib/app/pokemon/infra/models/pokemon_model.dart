@@ -1,12 +1,13 @@
 import 'dart:convert';
 
 import 'package:basic_utils/basic_utils.dart';
+import 'package:flutter/material.dart';
 
-import 'package:poke_clean_arch/app/pokemon/domain/entities/Ability.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/entities/pokemon.dart';
-import 'package:poke_clean_arch/app/pokemon/domain/entities/type.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/ability_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/move_model.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/named_api_resource_model.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/sprites_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/types_model.dart';
 
 class PokemonModel implements Pokemon {
@@ -15,7 +16,7 @@ class PokemonModel implements Pokemon {
   @override
   final int id;
   @override
-  final String frontImg;
+  final PokemonSpritesModel sprites;
   @override
   final List<TypeModel> types;
   @override
@@ -26,16 +27,19 @@ class PokemonModel implements Pokemon {
   final double weight;
   @override
   final List<MoveModel> moves;
+  @override
+  final NamedApiResourceModel species;
 
   const PokemonModel({
     required this.name,
     required this.id,
-    required this.frontImg,
+    required this.sprites,
     required this.types,
     required this.abilities,
     required this.height,
     required this.weight,
     required this.moves,
+    required this.species,
   });
 
   static String retornaIdTratado(String id) {
@@ -49,6 +53,24 @@ class PokemonModel implements Pokemon {
       default:
         return '#$id';
     }
+  }
+
+  Gradient retornaGradiente() {
+    if (types.length == 2) {
+      return LinearGradient(
+        colors: [types[0].colorType, types[1].colorType],
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        stops: const [
+          0.2,
+          0.9,
+        ],
+      );
+    }
+    return LinearGradient(colors: [
+      types[0].colorType,
+      types[0].colorType,
+    ]);
   }
 
   String retornaAbilities() {
@@ -65,12 +87,13 @@ class PokemonModel implements Pokemon {
     return {
       'name': name,
       'id': id,
-      'frontImg': frontImg,
+      'sprites': sprites.toMap(),
       'types': types.map((x) => x.toMap()).toList(),
       'abilities': abilities.map((x) => x.toMap()).toList(),
       'height': height,
       'weight': weight,
       'moves': moves.map((x) => x.toMap()).toList(),
+      'species': species.toMap(),
     };
   }
 
@@ -78,7 +101,7 @@ class PokemonModel implements Pokemon {
     return PokemonModel(
       name: map['name'] ?? '',
       id: map['id']?.toInt() ?? 0,
-      frontImg: map['sprites']['front_default'] ?? '',
+      sprites: PokemonSpritesModel.fromMap(map['sprites']),
       types:
           List<TypeModel>.from(map['types']?.map((x) => TypeModel.fromMap(x))),
       abilities: List<AbilityModel>.from(
@@ -87,6 +110,7 @@ class PokemonModel implements Pokemon {
       weight: map['weight']?.toDouble() ?? 0.0,
       moves:
           List<MoveModel>.from(map['moves']?.map((x) => MoveModel.fromMap(x))),
+      species: NamedApiResourceModel.fromMap(map['species']),
     );
   }
 

@@ -14,7 +14,6 @@
 .bar/
 Construir/
 cobertura/
-lib/generated_plugin_registrant.dart
 # Para pacotes de biblioteca, não confirme o arquivo pubspec.lock.
 # Regenerar o arquivo pubspec.lock permite testar seu pacote em relação às últimas versões compatíveis de suas dependências.
 # Veja https://dart.dev/guides/libraries/private-files#pubspeclock

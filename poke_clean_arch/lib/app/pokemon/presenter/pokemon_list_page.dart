@@ -1,10 +1,8 @@
 import 'package:basic_utils/basic_utils.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:poke_clean_arch/app/pokemon/domain/entities/pokemon.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/pokemon_model.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/cubits/pokemon_search_infinity/pokemon_search_infinity_cubit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -83,7 +81,7 @@ class _PokemonSearchInfinityState extends State<PokemonSearchInfinity> {
                           scrollDirection: Axis.vertical,
                           itemCount: state.pokemon.length,
                           itemBuilder: (BuildContext context, int index) {
-                            return ListItem(
+                            return ListItemPokemon(
                               index: index,
                               pokemon: state.pokemon[index],
                             );
@@ -111,8 +109,8 @@ class _PokemonSearchInfinityState extends State<PokemonSearchInfinity> {
   }
 }
 
-class ListItem extends StatelessWidget {
-  const ListItem({
+class ListItemPokemon extends StatelessWidget {
+  const ListItemPokemon({
     Key? key,
     required this.pokemon,
     required this.index,
@@ -130,103 +128,110 @@ class ListItem extends StatelessWidget {
         side: const BorderSide(color: Colors.white70, width: 1),
         borderRadius: BorderRadius.circular(20),
       ),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(20),
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: ((context) => DetailsPage(
-                        pokemon: pokemon,
-                      ))));
-        },
-        child: Stack(children: [
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Container(
-              width: 80,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  alignment: Alignment.bottomRight,
-                  opacity: 0.4,
-                  image: AssetImage('assets/pokebola-fundo-01.png'),
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            gradient: pokemon.retornaGradiente(),
+            border: Border.all(color: Colors.white70, width: 1)),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(20),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: ((context) => DetailsPage(
+                          pokemon: pokemon,
+                        ))));
+          },
+          child: Stack(children: [
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Container(
+                width: 80,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    alignment: Alignment.bottomRight,
+                    opacity: 0.4,
+                    image: AssetImage('assets/pokebola-fundo-01.png'),
+                  ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              children: [
-                Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        StringUtils.capitalize(pokemon.name),
-                        style: GoogleFonts.roboto(color: Colors.white),
-                      ),
-                      Text(
-                        PokemonModel.retornaIdTratado(pokemon.id.toString()),
-                        style: GoogleFonts.roboto(color: Colors.white),
-                      )
-                    ],
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          StringUtils.capitalize(pokemon.name),
+                          style: GoogleFonts.roboto(color: Colors.white),
+                        ),
+                        Text(
+                          PokemonModel.retornaIdTratado(pokemon.id.toString()),
+                          style: GoogleFonts.roboto(color: Colors.white),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Expanded(
-                        child: ListView.builder(
-                            reverse: true,
-                            itemCount: pokemon.types.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              return Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 5.0),
-                                    child: SvgPicture.asset(
-                                      pokemon.types[index].urlPicture,
-                                      width: 12,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 5,
-                                  ),
-                                  Padding(
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Expanded(
+                          child: ListView.builder(
+                              reverse: true,
+                              itemCount: pokemon.types.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return Row(
+                                  children: [
+                                    Padding(
                                       padding:
                                           const EdgeInsets.only(bottom: 5.0),
-                                      child: Text(
-                                        StringUtils.capitalize(
-                                            pokemon.types[index].name),
-                                        style: GoogleFonts.roboto(
-                                            color: Colors.white, fontSize: 11),
-                                      )),
-                                ],
-                              );
-                            }),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Image.network(
-                          pokemon.frontImg,
-                          alignment: Alignment.centerRight,
-                          height: 55,
-                          fit: BoxFit.cover,
+                                      child: SvgPicture.asset(
+                                        pokemon.types[index].urlPicture,
+                                        width: 12,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 5,
+                                    ),
+                                    Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 5.0),
+                                        child: Text(
+                                          StringUtils.capitalize(
+                                              pokemon.types[index].name),
+                                          style: GoogleFonts.roboto(
+                                              color: Colors.white,
+                                              fontSize: 11),
+                                        )),
+                                  ],
+                                );
+                              }),
                         ),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+                        Expanded(
+                          flex: 1,
+                          child: Image.network(
+                            pokemon.sprites.frontDefault,
+                            alignment: Alignment.centerRight,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
-          ),
-        ]),
+          ]),
+        ),
       ),
     );
   }

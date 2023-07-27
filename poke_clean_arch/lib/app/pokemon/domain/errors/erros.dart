@@ -7,3 +7,13 @@ class PokemonSearchException implements Exception {
   @override
   String toString() => 'PokemonSearchException(message: $message)';
 }
+
+class SpeciesSearchException implements Exception {
+  final String message;
+  SpeciesSearchException({
+    required this.message,
+  });
+
+  @override
+  String toString() => 'PokemonSearchException(message: $message)';
+}

@@ -14,12 +14,22 @@ class PokemonSearchState extends Equatable {
       pokemon: Pokemon(
         name: '',
         id: 0,
-        frontImg: '',
+        sprites: PokemonSpritesModel(
+          backDefault: '',
+          backShiny: '',
+          frontDefault: '',
+          frontShiny: '',
+          officialArtwork: OfficialArtworkModel(
+            frontDefault: '',
+            frontShiny: '',
+          ),
+        ),
         types: [],
         abilities: [],
         height: 0,
         weight: 0,
         moves: [],
+        species: NamedApiResourceModel(name: '', url: ''),
       ),
     );
   }
