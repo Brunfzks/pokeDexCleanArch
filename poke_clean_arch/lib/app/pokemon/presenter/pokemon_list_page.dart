@@ -130,7 +130,7 @@ class ListItemPokemon extends StatelessWidget {
       ),
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
+            borderRadius: const BorderRadius.all(Radius.circular(20)),
             gradient: pokemon.retornaGradiente(),
             border: Border.all(color: Colors.white70, width: 1)),
         child: InkWell(

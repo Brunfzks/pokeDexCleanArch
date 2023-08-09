@@ -2,13 +2,13 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\flutter\x64\Debug\flutter_assemble</FullPath>
+      <FullPath>E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\flutter\x64\Debug\flutter_assemble</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\Debug\poke_clean_arch.exe</FullPath>
+      <FullPath>E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\Debug\poke_clean_arch.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

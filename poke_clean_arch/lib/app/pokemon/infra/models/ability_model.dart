@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:poke_clean_arch/app/pokemon/domain/entities/Ability.dart';
+import 'package:poke_clean_arch/app/pokemon/domain/entities/ability.dart';
 
 class AbilityModel implements Ability {
   @override

@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:poke_clean_arch/app/pokemon/domain/entities/genus.dart';
-import 'package:poke_clean_arch/app/pokemon/infra/models/languages_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/named_api_resource_model.dart';
 
 class GenusModel implements Genus {

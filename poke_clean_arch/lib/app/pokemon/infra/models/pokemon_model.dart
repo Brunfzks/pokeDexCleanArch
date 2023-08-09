@@ -7,6 +7,7 @@ import 'package:poke_clean_arch/app/pokemon/domain/entities/pokemon.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/ability_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/move_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/named_api_resource_model.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/pokemon_stat_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/sprites_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/types_model.dart';
 
@@ -29,6 +30,8 @@ class PokemonModel implements Pokemon {
   final List<MoveModel> moves;
   @override
   final NamedApiResourceModel species;
+  @override
+  final List<PokemonStatModel> stats;
 
   const PokemonModel({
     required this.name,
@@ -40,6 +43,7 @@ class PokemonModel implements Pokemon {
     required this.weight,
     required this.moves,
     required this.species,
+    required this.stats,
   });
 
   static String retornaIdTratado(String id) {
@@ -111,6 +115,8 @@ class PokemonModel implements Pokemon {
       moves:
           List<MoveModel>.from(map['moves']?.map((x) => MoveModel.fromMap(x))),
       species: NamedApiResourceModel.fromMap(map['species']),
+      stats: List<PokemonStatModel>.from(
+          map['stats']?.map((x) => PokemonStatModel.fromMap(x))),
     );
   }
 

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\CMakeFiles\64bd0a62bfbc078ef4b2e7e8babdd3c8\INSTALL_force.rule">
+    <CustomBuild Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\CMakeFiles\1ebe0f61fd4a5b00bc15a5e1f73b9b27\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{1DA73E51-4018-3018-ABE7-211B04046976}</UniqueIdentifier>
+      <UniqueIdentifier>{5B989165-D6FC-32EC-ACBF-3C92C6DFB206}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

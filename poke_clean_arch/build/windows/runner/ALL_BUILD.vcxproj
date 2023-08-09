@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
@@ -18,9 +18,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4BB914BD-F849-3242-ACAD-3CA62721F54F}</ProjectGuid>
+    <ProjectGuid>{DFA91A3C-8B0C-30FE-A4E3-B080908EA174}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -29,17 +30,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -85,11 +86,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\CMakeLists.txt">
-      <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
+    <CustomBuild Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BE:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -98,11 +99,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BE:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -111,11 +112,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BE:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -124,21 +125,21 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\ZERO_CHECK.vcxproj">
-      <Project>{7D722CF9-E83F-3B2C-9CAB-D4DA50FC850B}</Project>
+    <ProjectReference Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\ZERO_CHECK.vcxproj">
+      <Project>{8B3F9518-9FF1-358A-AC9B-1E49D45F8E19}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\poke_clean_arch.vcxproj">
-      <Project>{DF3CE88E-711E-332C-8139-4325458270AE}</Project>
+    <ProjectReference Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\poke_clean_arch.vcxproj">
+      <Project>{39BDC712-F574-3F22-893C-DEB0A9B5B35E}</Project>
       <Name>poke_clean_arch</Name>
     </ProjectReference>
   </ItemGroup>

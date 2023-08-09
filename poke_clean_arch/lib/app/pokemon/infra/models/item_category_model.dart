@@ -4,7 +4,7 @@ import 'package:poke_clean_arch/app/pokemon/domain/entities/item_category.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/name_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/named_api_resource_model.dart';
 
-class itemCategoryModel implements ItemCategory {
+class ItemCategoryModel implements ItemCategory {
   @override
   final int id;
 
@@ -19,7 +19,7 @@ class itemCategoryModel implements ItemCategory {
 
   @override
   final NamedApiResourceModel pocket;
-  itemCategoryModel({
+  ItemCategoryModel({
     required this.id,
     required this.items,
     required this.name,
@@ -37,8 +37,8 @@ class itemCategoryModel implements ItemCategory {
     };
   }
 
-  factory itemCategoryModel.fromMap(Map<String, dynamic> map) {
-    return itemCategoryModel(
+  factory ItemCategoryModel.fromMap(Map<String, dynamic> map) {
+    return ItemCategoryModel(
       id: map['id']?.toInt() ?? 0,
       items: List<NamedApiResourceModel>.from(
           map['items']?.map((x) => NamedApiResourceModel.fromMap(x))),
@@ -51,6 +51,6 @@ class itemCategoryModel implements ItemCategory {
 
   String toJson() => json.encode(toMap());
 
-  factory itemCategoryModel.fromJson(String source) =>
-      itemCategoryModel.fromMap(json.decode(source));
+  factory ItemCategoryModel.fromJson(String source) =>
+      ItemCategoryModel.fromMap(json.decode(source));
 }

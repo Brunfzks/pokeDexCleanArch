@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 part of 'pokemon_search_cubit.dart';
 
 class PokemonSearchState extends Equatable {
@@ -30,6 +32,7 @@ class PokemonSearchState extends Equatable {
         weight: 0,
         moves: [],
         species: NamedApiResourceModel(name: '', url: ''),
+        stats: [],
       ),
     );
   }

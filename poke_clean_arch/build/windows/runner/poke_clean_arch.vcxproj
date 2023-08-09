@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
@@ -18,9 +18,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DF3CE88E-711E-332C-8139-4325458270AE}</ProjectGuid>
+    <ProjectGuid>{39BDC712-F574-3F22-893C-DEB0A9B5B35E}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
     <Platform>x64</Platform>
     <ProjectName>poke_clean_arch</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -29,17 +30,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -50,19 +51,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">poke_clean_arch.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">poke_clean_arch</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\Profile\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\Profile\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">poke_clean_arch.dir\Profile\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">poke_clean_arch</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">poke_clean_arch.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">poke_clean_arch</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
@@ -71,7 +72,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -86,15 +87,15 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_HAS_EXCEPTIONS=0;_DEBUG;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_HAS_EXCEPTIONS=0;_DEBUG;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -102,25 +103,25 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\flutter\Debug\flutter_wrapper_app.lib;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\flutter\Debug\flutter_wrapper_app.lib;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/poke_clean_arch.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/poke_clean_arch.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/poke_clean_arch.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/poke_clean_arch.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
     <Manifest>
-      <AdditionalManifestFiles>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+      <AdditionalManifestFiles>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
     </Manifest>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>"4100"</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -133,17 +134,17 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Profile";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Profile"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Profile\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Profile\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -151,25 +152,25 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\flutter\Profile\flutter_wrapper_app.lib;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\flutter\Profile\flutter_wrapper_app.lib;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Profile/poke_clean_arch.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Profile/poke_clean_arch.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Profile/poke_clean_arch.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Profile/poke_clean_arch.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
     <Manifest>
-      <AdditionalManifestFiles>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+      <AdditionalManifestFiles>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
     </Manifest>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>"4100"</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -182,17 +183,17 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -200,28 +201,28 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\flutter\Release\flutter_wrapper_app.lib;C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\flutter\Release\flutter_wrapper_app.lib;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Release/poke_clean_arch.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Release/poke_clean_arch.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Release/poke_clean_arch.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Release/poke_clean_arch.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
     <Manifest>
-      <AdditionalManifestFiles>C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+      <AdditionalManifestFiles>E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\CMakeLists.txt">
-      <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
+    <CustomBuild Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BE:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -230,11 +231,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BE:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -243,11 +244,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BC:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BE:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows --check-stamp-file E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -256,33 +257,33 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\flutter_window.cpp" />
-    <ClCompile Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\main.cpp" />
-    <ClCompile Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\utils.cpp" />
-    <ClCompile Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\win32_window.cpp" />
-    <ClCompile Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\generated_plugin_registrant.cc" />
-    <ResourceCompile Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\Runner.rc" />
+    <ClCompile Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\flutter_window.cpp" />
+    <ClCompile Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\main.cpp" />
+    <ClCompile Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\utils.cpp" />
+    <ClCompile Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\win32_window.cpp" />
+    <ClCompile Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\generated_plugin_registrant.cc" />
+    <ResourceCompile Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\runner\Runner.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\ZERO_CHECK.vcxproj">
-      <Project>{7D722CF9-E83F-3B2C-9CAB-D4DA50FC850B}</Project>
+    <ProjectReference Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\ZERO_CHECK.vcxproj">
+      <Project>{8B3F9518-9FF1-358A-AC9B-1E49D45F8E19}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\flutter\flutter_assemble.vcxproj">
-      <Project>{A4AA5029-3EF3-3BCC-B8FC-2D656ED22453}</Project>
+    <ProjectReference Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\flutter\flutter_assemble.vcxproj">
+      <Project>{7559BBCD-F5BE-3D63-A5CE-BAD75DC442FD}</Project>
       <Name>flutter_assemble</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\user\Documents\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\flutter\flutter_wrapper_app.vcxproj">
-      <Project>{26675BB2-58F8-36C0-A275-2605DC5484C1}</Project>
+    <ProjectReference Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\flutter\flutter_wrapper_app.vcxproj">
+      <Project>{E8F82DEB-F236-393D-B480-DADFCE00DDDF}</Project>
       <Name>flutter_wrapper_app</Name>
     </ProjectReference>
   </ItemGroup>

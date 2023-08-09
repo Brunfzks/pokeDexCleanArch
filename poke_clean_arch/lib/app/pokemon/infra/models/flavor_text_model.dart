@@ -28,7 +28,7 @@ class FlavorTextModel implements FlavorText {
 
   factory FlavorTextModel.fromMap(Map<String, dynamic> map) {
     return FlavorTextModel(
-      flavorText: map['flavor_text'] ?? '',
+      flavorText: map['flavor_text'].replaceAll('\n', ' ') ?? '',
       language: NamedApiResourceModel.fromMap(map['language']),
       version: NamedApiResourceModel.fromMap(map['version']),
     );

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\user\\Documents\\GitHub\\pokeDexCleanArch\\poke_clean_arch\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "E:\\GitHub\\pokeDexCleanArch\\poke_clean_arch\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user\\Documents\\GitHub\\pokeDexCleanArch\\poke_clean_arch\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "E:\\GitHub\\pokeDexCleanArch\\poke_clean_arch\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

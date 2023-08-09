@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:poke_clean_arch/app/pokemon/domain/entities/Move.dart';
+import 'package:poke_clean_arch/app/pokemon/domain/entities/move.dart';
 
 class MoveModel implements Move {
   @override

@@ -1,6 +1,7 @@
 import 'package:poke_clean_arch/app/pokemon/infra/models/ability_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/move_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/named_api_resource_model.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/pokemon_stat_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/sprites_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/types_model.dart';
 
@@ -14,6 +15,7 @@ class Pokemon {
   final List<AbilityModel> abilities;
   final List<MoveModel> moves;
   final NamedApiResourceModel species;
+  final List<PokemonStatModel> stats;
 
   Pokemon({
     required this.name,
@@ -25,5 +27,6 @@ class Pokemon {
     required this.weight,
     required this.moves,
     required this.species,
+    required this.stats,
   });
 }

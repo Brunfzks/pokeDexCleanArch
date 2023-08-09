@@ -1,7 +1,7 @@
 io/flutter/plugins/pathprovider/Messages.java
  io.flutter.plugins.pathprovider.Messages
+ io.flutter.plugins.pathprovider.Messages$FlutterError
  io.flutter.plugins.pathprovider.Messages$PathProviderApi
- io.flutter.plugins.pathprovider.Messages$PathProviderApiCodec
  io.flutter.plugins.pathprovider.Messages$StorageDirectory
 io/flutter/plugins/pathprovider/StorageDirectoryMapper.java
  io.flutter.plugins.pathprovider.StorageDirectoryMapper

@@ -36,6 +36,7 @@ class PokemonSearchInfinityState extends Equatable {
           weight: 0,
           moves: [],
           species: NamedApiResourceModel(name: '', url: ''),
+          stats: [],
         )
       ],
       status: PokeStatus.initial,

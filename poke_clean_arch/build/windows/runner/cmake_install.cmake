@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/user/Documents/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner
+# Install script for directory: E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/runner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
