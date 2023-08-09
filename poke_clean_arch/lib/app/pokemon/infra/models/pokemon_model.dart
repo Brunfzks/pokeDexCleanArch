@@ -46,10 +46,8 @@ class PokemonModel implements Pokemon {
     required this.stats,
   });
 
-  static String retornaIdTratado(String id) {
-    var aux = id.length;
-
-    switch (aux) {
+  String retornaIdTratado() {
+    switch (id.toString().length) {
       case 1:
         return '#00$id';
       case 2:

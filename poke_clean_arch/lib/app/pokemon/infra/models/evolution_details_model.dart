@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 import 'package:poke_clean_arch/app/pokemon/domain/entities/evolution_details.dart';
@@ -5,54 +6,54 @@ import 'package:poke_clean_arch/app/pokemon/infra/models/named_api_resource_mode
 
 class EvolutionDetailsModel implements EvolutionDetails {
   @override
-  final int gender;
+  final int? gender;
 
   @override
-  final NamedApiResourceModel heldItem;
+  final NamedApiResourceModel? heldItem;
   @override
-  final NamedApiResourceModel item;
+  final NamedApiResourceModel? item;
 
   @override
-  final NamedApiResourceModel knowMove;
+  final NamedApiResourceModel? knowMove;
 
   @override
-  final NamedApiResourceModel knowMoveType;
+  final NamedApiResourceModel? knowMoveType;
 
   @override
-  final NamedApiResourceModel location;
+  final NamedApiResourceModel? location;
 
   @override
-  final int minAffection;
+  final int? minAffection;
 
   @override
-  final int minBeauty;
+  final int? minBeauty;
 
   @override
-  final int minHappiness;
+  final int? minHappiness;
 
   @override
-  final int minLevel;
+  final int? minLevel;
 
   @override
-  final bool needsOverWorldrain;
+  final bool? needsOverWorldrain;
 
   @override
-  final NamedApiResourceModel partySpecies;
+  final NamedApiResourceModel? partySpecies;
 
   @override
-  final int relativePhysicalStats;
+  final int? relativePhysicalStats;
 
   @override
-  final String timeOfDay;
+  final String? timeOfDay;
 
   @override
-  final NamedApiResourceModel tradeSpecies;
+  final NamedApiResourceModel? tradeSpecies;
 
   @override
-  final NamedApiResourceModel trigger;
+  final NamedApiResourceModel? trigger;
 
   @override
-  final bool turnUpsideDown;
+  final bool? turnUpsideDown;
 
   EvolutionDetailsModel(
       this.gender,
@@ -74,51 +75,79 @@ class EvolutionDetailsModel implements EvolutionDetails {
       this.turnUpsideDown);
 
   Map<String, dynamic> toMap() {
-    return {
+    return <String, dynamic>{
       'gender': gender,
-      'heldItem': heldItem.toMap(),
-      'item': item.toMap(),
-      'knowMove': knowMove.toMap(),
-      'knowMoveType': knowMoveType.toMap(),
-      'location': location.toMap(),
+      'heldItem': heldItem?.toMap(),
+      'item': item?.toMap(),
+      'knowMove': knowMove?.toMap(),
+      'knowMoveType': knowMoveType?.toMap(),
+      'location': location?.toMap(),
       'minAffection': minAffection,
       'minBeauty': minBeauty,
       'minHappiness': minHappiness,
       'minLevel': minLevel,
       'needsOverWorldrain': needsOverWorldrain,
-      'partySpecies': partySpecies.toMap(),
+      'partySpecies': partySpecies?.toMap(),
       'relativePhysicalStats': relativePhysicalStats,
       'timeOfDay': timeOfDay,
-      'tradeSpecies': tradeSpecies.toMap(),
-      'trigger': trigger.toMap(),
+      'tradeSpecies': tradeSpecies?.toMap(),
+      'trigger': trigger?.toMap(),
       'turnUpsideDown': turnUpsideDown,
     };
   }
 
   factory EvolutionDetailsModel.fromMap(Map<String, dynamic> map) {
     return EvolutionDetailsModel(
-      map['gender']?.toInt() ?? 0,
-      NamedApiResourceModel.fromMap(map['held_item']),
-      NamedApiResourceModel.fromMap(map['item']),
-      NamedApiResourceModel.fromMap(map['known_move']),
-      NamedApiResourceModel.fromMap(map['known_move_type']),
-      NamedApiResourceModel.fromMap(map['location']),
-      map['min_affection']?.toInt() ?? 0,
-      map['min_beauty']?.toInt() ?? 0,
-      map['min_happiness']?.toInt() ?? 0,
-      map['min_level']?.toInt() ?? 0,
-      map['needs_overworld_rain'] ?? false,
-      NamedApiResourceModel.fromMap(map['party_species']),
-      map['relative_physical_stats']?.toInt() ?? 0,
-      map['time_of_day'] ?? '',
-      NamedApiResourceModel.fromMap(map['trade_species']),
-      NamedApiResourceModel.fromMap(map['trigger']),
-      map['turn_upside_down'] ?? false,
+      map['gender'] != null ? map['gender'] as int : null,
+      map['held_item'] != null
+          ? NamedApiResourceModel.fromMap(
+              map['held_item'] as Map<String, dynamic>)
+          : null,
+      map['item'] != null
+          ? NamedApiResourceModel.fromMap(map['item'] as Map<String, dynamic>)
+          : null,
+      map['known_move'] != null
+          ? NamedApiResourceModel.fromMap(
+              map['known_move'] as Map<String, dynamic>)
+          : null,
+      map['known_move_type'] != null
+          ? NamedApiResourceModel.fromMap(
+              map['known_move_type'] as Map<String, dynamic>)
+          : null,
+      map['location'] != null
+          ? NamedApiResourceModel.fromMap(
+              map['location'] as Map<String, dynamic>)
+          : null,
+      map['min_affection'] != null ? map['min_affection'] as int : null,
+      map['min_beauty'] != null ? map['min_beauty'] as int : null,
+      map['min_happiness'] != null ? map['min_happiness'] as int : null,
+      map['min_level'] != null ? map['min_level'] as int : null,
+      map['needs_overworld_rain'] != null
+          ? map['needs_overworld_rain'] as bool
+          : null,
+      map['party_species'] != null
+          ? NamedApiResourceModel.fromMap(
+              map['party_species'] as Map<String, dynamic>)
+          : null,
+      map['relative_physical_stats'] != null
+          ? map['relative_physical_stats'] as int
+          : null,
+      map['time_of_day'] != null ? map['time_of_day'] as String : null,
+      map['trade_species'] != null
+          ? NamedApiResourceModel.fromMap(
+              map['trade_species'] as Map<String, dynamic>)
+          : null,
+      map['trigger'] != null
+          ? NamedApiResourceModel.fromMap(
+              map['trigger'] as Map<String, dynamic>)
+          : null,
+      map['turn_upside_down'] != null ? map['turn_upside_down'] as bool : null,
     );
   }
 
   String toJson() => json.encode(toMap());
 
   factory EvolutionDetailsModel.fromJson(String source) =>
-      EvolutionDetailsModel.fromMap(json.decode(source));
+      EvolutionDetailsModel.fromMap(
+          json.decode(source) as Map<String, dynamic>);
 }

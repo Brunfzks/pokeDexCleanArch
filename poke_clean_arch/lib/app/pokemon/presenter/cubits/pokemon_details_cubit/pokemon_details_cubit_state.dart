@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/api_source_model.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/chain_link_model.dart';
+import 'package:poke_clean_arch/app/pokemon/infra/models/evolution_chain_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/named_api_resource_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/official_artwork_model.dart';
 
@@ -19,12 +21,16 @@ class PokemonDetailState extends Equatable {
   final SpeciesModel specie;
   final String error;
   final PokemonModel pokemon;
+  final EvolutionChainModel evolutionChain;
+  final List<PokemonModel> evolutions;
 
   const PokemonDetailState({
     required this.status,
     required this.specie,
     required this.error,
     required this.pokemon,
+    required this.evolutionChain,
+    required this.evolutions,
   });
 
   factory PokemonDetailState.initial() {
@@ -81,6 +87,13 @@ class PokemonDetailState extends Equatable {
         shape: NamedApiResourceModel(name: '', url: ''),
         varieties: [],
       ),
+      evolutionChain: EvolutionChainModel(
+        babyTriggerItem: NamedApiResourceModel(name: '', url: ''),
+        chain: ChainLinkModel(
+            [], [], false, NamedApiResourceModel(name: '', url: '')),
+        id: 0,
+      ),
+      evolutions: const [],
     );
   }
 
@@ -94,15 +107,20 @@ class PokemonDetailState extends Equatable {
     SpeciesModel? specie,
     String? error,
     PokemonModel? pokemon,
+    EvolutionChainModel? evolutionChain,
+    List<PokemonModel>? evolutions,
   }) {
     return PokemonDetailState(
       status: status ?? this.status,
       specie: specie ?? this.specie,
       error: error ?? this.error,
       pokemon: pokemon ?? this.pokemon,
+      evolutionChain: evolutionChain ?? this.evolutionChain,
+      evolutions: evolutions ?? this.evolutions,
     );
   }
 
   @override
-  List<Object> get props => [status, specie, error, pokemon];
+  List<Object> get props =>
+      [status, specie, error, pokemon, evolutionChain, evolutions];
 }

@@ -33,7 +33,8 @@ class ChainLinkModel implements ChainLink {
     return ChainLinkModel(
       List<EvolutionDetailsModel>.from(map['evolution_details']
           ?.map((x) => EvolutionDetailsModel.fromMap(x))),
-      List.from(map['evolves_to']),
+      List<ChainLinkModel>.from(
+          map['evolves_to']?.map((x) => ChainLinkModel.fromMap(x))),
       map['is_baby'] ?? false,
       NamedApiResourceModel.fromMap(map['species']),
     );

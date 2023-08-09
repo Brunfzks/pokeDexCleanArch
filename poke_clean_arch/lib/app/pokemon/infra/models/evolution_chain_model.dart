@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 import 'package:poke_clean_arch/app/pokemon/domain/entities/evolution_chain.dart';
@@ -6,7 +7,7 @@ import 'package:poke_clean_arch/app/pokemon/infra/models/named_api_resource_mode
 
 class EvolutionChainModel implements EvolutionChain {
   @override
-  final NamedApiResourceModel babyTriggerItem;
+  final NamedApiResourceModel? babyTriggerItem;
 
   @override
   final ChainLinkModel chain;
@@ -14,14 +15,14 @@ class EvolutionChainModel implements EvolutionChain {
   @override
   final int id;
   EvolutionChainModel({
-    required this.babyTriggerItem,
+    this.babyTriggerItem,
     required this.chain,
     required this.id,
   });
 
   Map<String, dynamic> toMap() {
-    return {
-      '': babyTriggerItem.toMap(),
+    return <String, dynamic>{
+      'babyTriggerItem': babyTriggerItem?.toMap(),
       'chain': chain.toMap(),
       'id': id,
     };
@@ -29,14 +30,17 @@ class EvolutionChainModel implements EvolutionChain {
 
   factory EvolutionChainModel.fromMap(Map<String, dynamic> map) {
     return EvolutionChainModel(
-      babyTriggerItem: NamedApiResourceModel.fromMap(map['baby_trigger_item']),
-      chain: ChainLinkModel.fromMap(map['chain']),
-      id: map['id']?.toInt() ?? 0,
+      babyTriggerItem: map['babyTriggerItem'] != null
+          ? NamedApiResourceModel.fromMap(
+              map['babyTriggerItem'] as Map<String, dynamic>)
+          : null,
+      chain: ChainLinkModel.fromMap(map['chain'] as Map<String, dynamic>),
+      id: map['id'] as int,
     );
   }
 
   String toJson() => json.encode(toMap());
 
   factory EvolutionChainModel.fromJson(String source) =>
-      EvolutionChainModel.fromMap(json.decode(source));
+      EvolutionChainModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

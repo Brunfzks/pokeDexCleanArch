@@ -4,7 +4,7 @@
             "outputFile": "E:\\GitHub\\pokeDexCleanArch\\poke_clean_arch\\build\\path_provider_android\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-nl\\values-nl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-2\\files-2.1\\122df2e57d294d1a53db26bbc3b813c1\\core-1.6.0\\res\\values-nl\\values-nl.xml",
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\2113905c51a8b20efa963a44f98f628d\\transformed\\core-1.6.0\\res\\values-nl\\values-nl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "E:\\GitHub\\pokeDexCleanArch\\poke_clean_arch\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\values-nl\\values-nl.xml",
+            "outputFile": "E:\\GitHub\\pokeDexCleanArch\\poke_clean_arch\\build\\path_provider_android\\intermediates\\merged_res\\debug\\values-nl\\values-nl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-2\\files-2.1\\122df2e57d294d1a53db26bbc3b813c1\\core-1.6.0\\res\\values-nl\\values-nl.xml",
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\2113905c51a8b20efa963a44f98f628d\\transformed\\core-1.6.0\\res\\values-nl\\values-nl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

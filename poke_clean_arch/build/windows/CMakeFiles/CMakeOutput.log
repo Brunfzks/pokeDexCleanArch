@@ -1,4 +1,4 @@
-The system is: Windows - 10.0.19044 - AMD64
+The system is: Windows - 10.0.19045 - AMD64
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
 Build flags: 
@@ -9,7 +9,7 @@ The output was:
 Microsoft(R) Build Engine versão 17.2.1+52cd2da31 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
-Compilação de 31/07/2023 10:44:02 iniciada.
+Compilação de 09/08/2023 12:27:43 iniciada.
 Projeto "E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\CMakeFiles\3.22.22040401-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" no nó 1 (destinos padrão).
 PrepareForBuild:
   Criando o diretório "Debug\".
@@ -35,7 +35,7 @@ Compilação com êxito.
     0 Aviso(s)
     0 Erro(s)
 
-Tempo Decorrido 00:00:11.19
+Tempo Decorrido 00:00:05.54
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -47,14 +47,14 @@ The CXX compiler identification is MSVC, found in "E:/GitHub/pokeDexCleanArch/po
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_de35b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && Microsoft(R) Build Engine versão 17.2.1+52cd2da31 para .NET Framework 
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_fc115.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && Microsoft(R) Build Engine versão 17.2.1+52cd2da31 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.32.31332 para x64
-  CMakeCXXCompilerABI.cpp
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_de35b.dir\Debug\\" /Fd"cmTC_de35b.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_de35b.vcxproj -> E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\CMakeFiles\CMakeTmp\Debug\cmTC_de35b.exe
+  CMakeCXXCompilerABI.cpp
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_fc115.dir\Debug\\" /Fd"cmTC_fc115.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_fc115.vcxproj -> E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\CMakeFiles\CMakeTmp\Debug\cmTC_fc115.exe
 
 
 

@@ -170,7 +170,7 @@ class ListItemPokemon extends StatelessWidget {
                           style: GoogleFonts.roboto(color: Colors.white),
                         ),
                         Text(
-                          PokemonModel.retornaIdTratado(pokemon.id.toString()),
+                         (pokemon.retornaIdTratado()),
                           style: GoogleFonts.roboto(color: Colors.white),
                         )
                       ],
