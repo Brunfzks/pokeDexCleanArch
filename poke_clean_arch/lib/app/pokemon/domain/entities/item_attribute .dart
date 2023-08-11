@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:poke_clean_arch/app/pokemon/infra/models/description_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/name_model.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/named_api_resource_model.dart';

@@ -28,3 +28,13 @@ class EvolutionChainSearchException implements Exception {
   @override
   String toString() => 'EvolutionChainSearch(message: $message)';
 }
+
+class GetPokemonQuizException implements Exception {
+  final String message;
+  GetPokemonQuizException({
+    required this.message,
+  });
+
+  @override
+  String toString() => 'EvolutionChainSearch(message: $message)';
+}

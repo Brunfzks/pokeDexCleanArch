@@ -4,6 +4,7 @@ import 'package:poke_clean_arch/app/pokemon/domain/errors/erros.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/repository/pokemon_repository.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/datasource/pokemon_datasource.dart';
 import 'package:poke_clean_arch/app/pokemon/infra/models/pokemon_model.dart';
+import 'package:poke_clean_arch/app/pokemon/usescases/get_pokemons_quiz.dart/get_pokemon_quiz.dart';
 import 'package:poke_clean_arch/app/pokemon/usescases/pokemon_search_by_name/pokemon_search_by_name.dart';
 import 'package:poke_clean_arch/app/pokemon/usescases/pokemon_search_infinity/pokemon_search_infinity.dart';
 
@@ -35,6 +36,19 @@ class PokemonRepositoryImpl implements PokemonRepository {
       return Left(e);
     } on Exception {
       return left(PokemonSearchException(message: 'Exception Error'));
+    }
+  }
+
+  @override
+  Future<Either<GetPokemonQuizException, List<PokemonModel>>> pokemonSearchById(
+      ParamsGetPokemonQuiz params) async {
+    try {
+      final pokemon = await datasource.pokemonSearchByIdQuiz(params);
+      return Right(pokemon);
+    } on GetPokemonQuizException catch (e) {
+      return Left(e);
+    } on Exception {
+      return left(GetPokemonQuizException(message: 'Exception Error'));
     }
   }
 }

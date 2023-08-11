@@ -1,7 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:basic_utils/basic_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -279,102 +278,117 @@ class EvolutionCard extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 280,
-      height: 120,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            width: 140,
-            height: 110,
-            decoration: BoxDecoration(
-              color: const Color(0xFFF2F4F7),
-              borderRadius: BorderRadius.circular(16),
+    return GestureDetector(
+      onTap: () {
+        if (context.read<PokemonDetailsCubitCubit>().state.pokemon.id !=
+            pokemon.id) {
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                  builder: ((context) => DetailsPage(
+                        pokemon: pokemon,
+                      ))));
+        }
+      },
+      child: SizedBox(
+        width: 280,
+        height: 120,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 140,
+              height: 110,
+              decoration: BoxDecoration(
+                color: const Color(0xFFF2F4F7),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Image.network(pokemon.sprites.frontDefault),
             ),
-            child: Image.network(pokemon.sprites.frontDefault),
-          ),
-          const SizedBox(
-            width: 24,
-          ),
-          SizedBox(
-              width: 108,
-              height: 125,
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      pokemon.retornaIdTratado(),
-                      style: GoogleFonts.roboto(
-                        color: const Color(0xFF8D9DB9),
-                        wordSpacing: 2,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
+            const SizedBox(
+              width: 24,
+            ),
+            SizedBox(
+                width: 108,
+                height: 125,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        pokemon.retornaIdTratado(),
+                        style: GoogleFonts.roboto(
+                          color: const Color(0xFF8D9DB9),
+                          wordSpacing: 2,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
-                    ),
-                    Text(
-                      pokemon.name.capitalize(),
-                      style: GoogleFonts.roboto(
-                        color: const Color(0xFF283141),
-                        wordSpacing: 2,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400,
+                      Text(
+                        pokemon.name.capitalize(),
+                        style: GoogleFonts.roboto(
+                          color: const Color(0xFF283141),
+                          wordSpacing: 2,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                        height: 90,
-                        width: 62,
-                        child: ListView.builder(
-                            itemCount: pokemon.types.length,
-                            itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.only(bottom: 8.0),
-                                child: SizedBox(
-                                  height: 36,
-                                  width: 62,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(8),
-                                        border: Border.all(
-                                            color: const Color(0xFFDFE4EC))),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        SvgPicture.asset(
-                                          pokemon.types[index].urlPicture,
-                                          width: 15,
-                                          height: 15,
-                                          color: pokemon.types[index].colorType,
-                                        ),
-                                        Text(
-                                          pokemon.types[index].name
-                                              .capitalize(),
-                                          style: GoogleFonts.roboto(
-                                              color: Colors.black87,
-                                              wordSpacing: 2,
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w500),
-                                        )
-                                      ],
+                      SizedBox(
+                          height: 90,
+                          width: 62,
+                          child: ListView.builder(
+                              itemCount: pokemon.types.length,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 8.0),
+                                  child: SizedBox(
+                                    height: 36,
+                                    width: 62,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                          border: Border.all(
+                                              color: const Color(0xFFDFE4EC))),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          SvgPicture.asset(
+                                            pokemon.types[index].urlPicture,
+                                            width: 15,
+                                            height: 15,
+                                            color:
+                                                pokemon.types[index].colorType,
+                                          ),
+                                          Text(
+                                            pokemon.types[index].name
+                                                .capitalize(),
+                                            style: GoogleFonts.roboto(
+                                                color: Colors.black87,
+                                                wordSpacing: 2,
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w500),
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                              );
-                            })),
-                  ],
-                ),
-              ))
-        ],
+                                );
+                              })),
+                    ],
+                  ),
+                ))
+          ],
+        ),
       ),
     );
   }
 }
 
 class Stats extends StatelessWidget {
-  Stats({
+  const Stats({
     Key? key,
     required this.stats,
   }) : super(key: key);

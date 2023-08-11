@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
-import 'package:poke_clean_arch/app/pokemon/domain/entities/pokemon.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/errors/erros.dart';
 import 'package:poke_clean_arch/app/pokemon/external/poke_api/evolution_chain_impl.dart';
 import 'package:poke_clean_arch/app/pokemon/external/poke_api/pokemon_api_impl.dart';
