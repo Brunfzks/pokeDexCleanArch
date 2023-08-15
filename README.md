@@ -60,10 +60,10 @@ Contribuições são bem-vindas! Se você quiser contribuir para este projeto, s
 
 ## Créditos aos Designers
 
-Gostaríamos de agradecer aos talentosos designers que contribuíram para a aparência visual deste aplicativo:
+Gostaríamos de agradecer ao talentoso designer que contribuiu para a aparência visual deste aplicativo:
 
 - Design de Interface: [Simone Cavallini](https://www.behance.net/simonecavallini1)
 
-O design atraente deste aplicativo é resultado do trabalho criativo e da dedicação desses profissionais. Apreciamos muito a sua contribuição para tornar o PokéDex Flutter App visualmente impressionante e funcional.
+O design atraente deste aplicativo é resultado do trabalho criativo e da dedicação desse profissional. Apreciamos muito a sua contribuição para tornar o PokéDex Flutter App visualmente impressionante e funcional.
 
 
