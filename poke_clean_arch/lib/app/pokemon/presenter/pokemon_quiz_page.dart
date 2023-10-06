@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 
 import 'package:poke_clean_arch/app/pokemon/infra/models/pokemon_model.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/cubits/quiz_cubit/quiz_cubit.dart';
+import 'package:poke_clean_arch/app/pokemon/presenter/widget/loading_screen.dart';
 import 'package:string_capitalize/string_capitalize.dart';
 
 class PokemonQuiz extends StatefulWidget {
@@ -24,9 +24,6 @@ class _PokemonQuizState extends State<PokemonQuiz> {
 
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height;
-    final double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -42,100 +39,98 @@ class _PokemonQuizState extends State<PokemonQuiz> {
           ),
         ),
       ),
-      body: BlocBuilder<PokemonQuizCubit, PokemonQuizState>(
-          builder: (context, state) {
-        if (state.status == QuizStatus.error) {
-          return Center(child: Text('Erro : ${state.error}'));
-        }
+      body: Container(
+        color: Colors.white,
+        child: BlocBuilder<PokemonQuizCubit, PokemonQuizState>(
+            builder: (context, state) {
+          if (state.status == QuizStatus.error) {
+            return Center(child: Text('Erro : ${state.error}'));
+          }
 
-        if (state.status == QuizStatus.loading) {
-          return Center(
-            child: SizedBox(
-              height: height * 0.4,
-              width: width * 0.4,
-              child: Lottie.asset('assets/loading.json'),
-            ),
-          );
-        }
+          if (state.status == QuizStatus.loading) {
+            return const LoadingScreen();
+          }
 
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Stack(
-                children: [
-                  Center(
-                    child: AnimatedOpacity(
-                      opacity: state.status == QuizStatus.hit ? 1.0 : 0.0,
-                      duration: const Duration(milliseconds: 500),
-                      child: Container(
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                          image: AssetImage("assets/hit_background.png"),
-                          fit: BoxFit.cover,
-                        )),
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Stack(
+                  children: [
+                    Center(
+                      child: AnimatedOpacity(
+                        opacity: state.status == QuizStatus.hit ? 1.0 : 0.0,
+                        duration: const Duration(milliseconds: 500),
+                        child: Container(
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                            image: AssetImage("assets/hit_background.png"),
+                            fit: BoxFit.cover,
+                          )),
+                        ),
                       ),
                     ),
-                  ),
-                  Center(
-                    child: Image.network(
-                      state
-                          .pokemonSelected.sprites.officialArtwork.frontDefault,
-                      height: 200,
-                      fit: BoxFit.cover,
-                      color:
-                          state.status == QuizStatus.hit ? null : Colors.black,
+                    Center(
+                      child: Image.network(
+                        state.pokemonSelected.sprites.officialArtwork
+                            .frontDefault,
+                        height: 200,
+                        fit: BoxFit.cover,
+                        color: state.status == QuizStatus.hit
+                            ? null
+                            : Colors.black,
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(24.0),
-                child: ListView.builder(
-                  itemCount: state.pokemons.length,
-                  itemBuilder: (context, index) {
-                    return CardSelect(pokemon: state.pokemons[index]);
-                  },
+                  ],
                 ),
               ),
-            ),
-            SizedBox(
+              Expanded(
                 child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: GestureDetector(
-                onTap: () {
-                  context.read<PokemonQuizCubit>().startGame();
-                },
-                child: Container(
-                  height: 44,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: const Color(0xFFDFE4EC),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Again',
-                      style: GoogleFonts.roboto(
-                        color: const Color(0xFF283141),
-                        fontSize: 12,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
+                  padding: const EdgeInsets.all(24.0),
+                  child: ListView.builder(
+                    itemCount: state.pokemons.length,
+                    itemBuilder: (context, index) {
+                      return CardSelect(pokemon: state.pokemons[index]);
+                    },
                   ),
                 ),
               ),
-            )),
-            SizedBox(
-              height: 16,
-            ),
-          ],
-        );
-      }),
+              SizedBox(
+                  child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: GestureDetector(
+                  onTap: () {
+                    context.read<PokemonQuizCubit>().startGame();
+                  },
+                  child: Container(
+                    height: 44,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: const Color(0xFFDFE4EC),
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Again',
+                        style: GoogleFonts.roboto(
+                          color: const Color(0xFF283141),
+                          fontSize: 12,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ),
+              )),
+              SizedBox(
+                height: 16,
+              ),
+            ],
+          );
+        }),
+      ),
     );
   }
 }

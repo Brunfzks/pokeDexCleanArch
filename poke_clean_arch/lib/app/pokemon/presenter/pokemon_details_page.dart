@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:poke_clean_arch/app/pokemon/domain/entities/evolution_chain.dart';
+import 'package:poke_clean_arch/app/pokemon/presenter/cubits/pokemon_favorite_cubit/pokemon_favorite_cubit.dart';
+import 'package:poke_clean_arch/app/pokemon/presenter/widget/loading_screen.dart';
 import 'package:string_capitalize/string_capitalize.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
@@ -37,8 +38,6 @@ class _DetailsPageState extends State<DetailsPage> {
 
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height;
-    final double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -48,8 +47,21 @@ class _DetailsPageState extends State<DetailsPage> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: const Icon(Icons.favorite_border),
-            onPressed: () {},
+            icon: context
+                    .watch<PokemonFavoriteCubit>()
+                    .state
+                    .pokemon
+                    .where((element) => element.id == widget.pokemon.id)
+                    .isNotEmpty
+                ? const Icon(
+                    Icons.favorite,
+                  )
+                : const Icon(
+                    Icons.favorite_border,
+                  ),
+            onPressed: () {
+              context.read<PokemonFavoriteCubit>().favorite(widget.pokemon);
+            },
             tooltip: 'Fav',
           )
         ],
@@ -61,13 +73,7 @@ class _DetailsPageState extends State<DetailsPage> {
         }
 
         if (state.status == PokeDetailStatus.loading) {
-          return Center(
-            child: SizedBox(
-              height: height * 0.4,
-              width: width * 0.4,
-              child: Lottie.asset('assets/loading.json'),
-            ),
-          );
+          return const LoadingScreen();
         }
         return SafeArea(
           child: Column(
@@ -152,10 +158,10 @@ class _DetailsPageState extends State<DetailsPage> {
                                   ),
                                 ],
                                 indicator: MaterialIndicator(
-                                  height: 3,
+                                  height: 4,
                                   topLeftRadius: 8,
                                   topRightRadius: 8,
-                                  horizontalPadding: 28,
+                                  horizontalPadding: 2,
                                   tabPosition: TabPosition.bottom,
                                 ),
                                 indicatorColor: Colors.black,
@@ -335,9 +341,10 @@ class EvolutionCard extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                          height: 90,
+                          height: 83,
                           width: 62,
                           child: ListView.builder(
+                              physics: const NeverScrollableScrollPhysics(),
                               itemCount: pokemon.types.length,
                               itemBuilder: (context, index) {
                                 return Padding(

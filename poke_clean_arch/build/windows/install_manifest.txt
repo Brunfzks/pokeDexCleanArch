@@ -3,6 +3,7 @@ E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/flutter_wi
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/AssetManifest.bin
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/assets/height.svg
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/assets/hit_background.png
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/assets/loading.json
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/assets/pokebola-fundo-01.png
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/assets/StatProg.svg
@@ -28,6 +29,7 @@ E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutt
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/NOTICES
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

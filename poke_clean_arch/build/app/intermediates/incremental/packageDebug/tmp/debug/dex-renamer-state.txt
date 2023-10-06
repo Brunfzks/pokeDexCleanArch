@@ -1,4 +1,4 @@
-#Fri Aug 11 14:57:00 BRT 2023
+#Tue Oct 03 13:05:32 BRT 2023
 base.0=E\:\\GitHub\\pokeDexCleanArch\\poke_clean_arch\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

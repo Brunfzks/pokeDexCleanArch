@@ -46,6 +46,7 @@ dependencies:
   basic_utils: ^5.4.2
   tab_indicator_styler: ^2.0.0
   string_capitalize: ^0.0.10
+  shared_preferences: ^2.2.0
 
 dev_dependencies:
   flutter_test:

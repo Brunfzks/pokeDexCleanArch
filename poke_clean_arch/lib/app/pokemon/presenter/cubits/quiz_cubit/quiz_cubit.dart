@@ -40,7 +40,7 @@ class PokemonQuizCubit extends Cubit<PokemonQuizState> {
         state.copyWith(
           pokemons: pokemon,
           status: QuizStatus.completed,
-          pokemonSelected: pokemon[0 + Random().nextInt(3 - 0)],
+          pokemonSelected: pokemon[0 + Random().nextInt(4 - 0)],
         ),
       );
     });

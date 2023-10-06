@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.poke_clean_arch">
+    
    <application
         android:label="poke_clean_arch"
         android:name="${applicationName}"

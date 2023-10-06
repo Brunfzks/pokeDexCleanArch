@@ -38,3 +38,13 @@ class GetPokemonQuizException implements Exception {
   @override
   String toString() => 'EvolutionChainSearch(message: $message)';
 }
+
+class SahredPreferencesExption implements Exception {
+  final String message;
+  SahredPreferencesExption({
+    required this.message,
+  });
+
+  @override
+  String toString() => 'SahredPreferencesExption(message: $message)';
+}

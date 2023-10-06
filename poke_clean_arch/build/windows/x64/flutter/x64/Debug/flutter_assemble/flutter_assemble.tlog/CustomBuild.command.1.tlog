@@ -1,0 +1,28 @@
+^E:\GITHUB\POKEDEXCLEANARCH\POKE_CLEAN_ARCH\BUILD\WINDOWS\X64\CMAKEFILES\E9D11072E05E947AC03E36948F90802C\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral PROJECT_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch FLUTTER_TARGET=E:\GitHub\pokeDexCleanArch\poke_clean_arch\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC80NTM0MTFiY2YzOTYxZmVmM2U2Y2FhNTdhMDRlN2ZjM2U5ZmFhMDM3Lw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=E:\GitHub\pokeDexCleanArch\poke_clean_arch\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\GITHUB\POKEDEXCLEANARCH\POKE_CLEAN_ARCH\BUILD\WINDOWS\X64\CMAKEFILES\0586133CF0D2FA8D9656A5E344C9E4EC\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\GITHUB\POKEDEXCLEANARCH\POKE_CLEAN_ARCH\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BE:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64 --check-stamp-file E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

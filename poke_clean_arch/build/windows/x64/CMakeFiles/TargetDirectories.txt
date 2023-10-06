@@ -1,0 +1,10 @@
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/CMakeFiles/INSTALL.dir
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/CMakeFiles/ALL_BUILD.dir
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/CMakeFiles/ZERO_CHECK.dir
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_app.dir
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/flutter/CMakeFiles/flutter_assemble.dir
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/flutter/CMakeFiles/INSTALL.dir
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/runner/CMakeFiles/poke_clean_arch.dir
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/runner/CMakeFiles/INSTALL.dir
+E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/runner/CMakeFiles/ALL_BUILD.dir

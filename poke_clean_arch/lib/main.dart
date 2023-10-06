@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/cubits/pokemon_details_cubit/pokemon_details_cubit_cubit.dart';
+import 'package:poke_clean_arch/app/pokemon/presenter/cubits/pokemon_favorite_cubit/pokemon_favorite_cubit.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/cubits/pokemon_search_cubit/pokemon_search_cubit.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/cubits/pokemon_search_infinity/pokemon_search_infinity_cubit.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/cubits/quiz_cubit/quiz_cubit.dart';
@@ -27,11 +28,15 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider<PokemonQuizCubit>(
           create: (context) => PokemonQuizCubit(),
+        ),
+        BlocProvider<PokemonFavoriteCubit>(
+          create: (context) => PokemonFavoriteCubit(
+              BlocProvider.of<PokemonSearchCubit>(context)),
         )
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Pokédex',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

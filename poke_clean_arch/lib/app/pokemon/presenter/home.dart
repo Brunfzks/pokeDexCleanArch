@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:poke_clean_arch/app/pokemon/presenter/cubits/pokemon_favorite_cubit/pokemon_favorite_cubit.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/cubits/pokemon_search_infinity/pokemon_search_infinity_cubit.dart';
+import 'package:poke_clean_arch/app/pokemon/presenter/pokemon_favorite_page.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/pokemon_list_page.dart';
 import 'package:poke_clean_arch/app/pokemon/presenter/pokemon_quiz_page.dart';
 
@@ -15,9 +17,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final List<Widget> telas = [
     PokemonSearchInfinity(),
-    Container(),
     const PokemonQuiz(),
-    Container(),
+    PokemonFavoritePage(),
   ];
 
   int currentIndice = 0;
@@ -25,7 +26,8 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    context.read<PokemonSearchInfinityCubit>().searchPokemoninfinity(100, 0);
+    context.read<PokemonSearchInfinityCubit>().searchPokemoninfinity(20, 0);
+    context.read<PokemonFavoriteCubit>().loadFavorites();
   }
 
   @override
@@ -53,30 +55,30 @@ class _HomeState extends State<Home> {
           showSelectedLabels: true,
           showUnselectedLabels: true,
           currentIndex: currentIndice,
-          items: const [
+          items: [
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
-                color: Color(0XFF283141),
+                color: currentIndice == 0
+                    ? const Color(0XFF283141)
+                    : const Color(0xFF8D9DB9),
               ),
               label: "Home",
             ),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.compare_arrows,
-                  color: Color(0XFF8D9DB9),
-                ),
-                label: "Comparator"),
-            BottomNavigationBarItem(
-                icon: Icon(
                   Icons.quiz,
-                  color: Color(0XFF8D9DB9),
+                  color: currentIndice == 1
+                      ? const Color(0XFF283141)
+                      : const Color(0xFF8D9DB9),
                 ),
                 label: "Quiz"),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.favorite,
-                  color: Color(0XFF8D9DB9),
+                  color: currentIndice == 2
+                      ? const Color(0XFF283141)
+                      : const Color(0xFF8D9DB9),
                 ),
                 label: "Favorites"),
           ],

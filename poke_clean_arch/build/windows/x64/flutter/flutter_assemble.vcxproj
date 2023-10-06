@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|x64">
+      <Configuration>Profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C2FDE784-DCAE-3735-9175-CEB0CDDE3E35}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <Platform>x64</Platform>
+    <ProjectName>flutter_assemble</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\CMakeFiles\e9d11072e05e947ac03e36948f90802c\flutter_windows.dll.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_windows.dll, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_export.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_windows.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_messenger.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_plugin_registrar.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_texture_registrar.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral PROJECT_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch FLUTTER_TARGET=E:\GitHub\pokeDexCleanArch\poke_clean_arch\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC80NTM0MTFiY2YzOTYxZmVmM2U2Y2FhNTdhMDRlN2ZjM2U5ZmFhMDM3Lw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=E:\GitHub\pokeDexCleanArch\poke_clean_arch\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_export.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_messenger.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_plugin_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_texture_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\flutter\_phony_</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Generating E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_windows.dll, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_export.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_windows.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_messenger.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_plugin_registrar.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_texture_registrar.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral PROJECT_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch FLUTTER_TARGET=E:\GitHub\pokeDexCleanArch\poke_clean_arch\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC80NTM0MTFiY2YzOTYxZmVmM2U2Y2FhNTdhMDRlN2ZjM2U5ZmFhMDM3Lw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=E:\GitHub\pokeDexCleanArch\poke_clean_arch\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Profile
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_export.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_messenger.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_plugin_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_texture_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\flutter\_phony_</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_windows.dll, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_export.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_windows.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_messenger.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_plugin_registrar.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/flutter_texture_registrar.h, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral PROJECT_DIR=E:\GitHub\pokeDexCleanArch\poke_clean_arch FLUTTER_TARGET=E:\GitHub\pokeDexCleanArch\poke_clean_arch\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC80NTM0MTFiY2YzOTYxZmVmM2U2Y2FhNTdhMDRlN2ZjM2U5ZmFhMDM3Lw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=E:\GitHub\pokeDexCleanArch\poke_clean_arch\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_export.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_messenger.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_plugin_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_texture_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\flutter\_phony_</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\CMakeFiles\0586133cf0d2fa8d9656a5e344c9e4ec\flutter_assemble.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_export.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_messenger.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_plugin_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_texture_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\flutter\CMakeFiles\flutter_assemble</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_export.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_messenger.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_plugin_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_texture_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\flutter\CMakeFiles\flutter_assemble</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.dll;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_export.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_windows.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_messenger.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_plugin_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\flutter_texture_registrar.h;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc;E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\flutter\CMakeFiles\flutter_assemble</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BE:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64 --check-stamp-file E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\generated_config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\flutter\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BE:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64 --check-stamp-file E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\generated_config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\flutter\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/GitHub/pokeDexCleanArch/poke_clean_arch/windows/flutter/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/GitHub/pokeDexCleanArch/poke_clean_arch/windows -BE:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64 --check-stamp-file E:/GitHub/pokeDexCleanArch/poke_clean_arch/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\windows\flutter\ephemeral\generated_config.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\flutter\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\flutter\CMakeFiles\flutter_assemble">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\GitHub\pokeDexCleanArch\poke_clean_arch\build\windows\x64\ZERO_CHECK.vcxproj">
+      <Project>{566082CA-234F-3414-9C3C-161A19FF2DF9}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

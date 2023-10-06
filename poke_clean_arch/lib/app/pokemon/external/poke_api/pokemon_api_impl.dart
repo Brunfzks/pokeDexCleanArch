@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'dart:math';
 
 import 'package:dio/dio.dart';
@@ -34,7 +33,7 @@ class PokemonApi implements PokemonDataSource {
       ParamsSearchInfinityPokemon params) async {
     try {
       var result = await Dio().get(
-          'https://pokeapi.co/api/v2/pokemon?limit=${params.limit ?? 100}&offset=${params.offset ?? 0}');
+          'https://pokeapi.co/api/v2/pokemon?limit=${params.limit ?? 20}&offset=${params.offset ?? 0}');
       if (result.statusCode == 200) {
         var json = result.data['results'];
         List<PokemonModel> listPokemon = [];
@@ -56,24 +55,24 @@ class PokemonApi implements PokemonDataSource {
   @override
   Future<List<PokemonModel>> pokemonSearchByIdQuiz(
       ParamsGetPokemonQuiz params) async {
-    List<PokemonModel> aux = [];
-    for (var i = 0; i <= 3; i++) {
-      try {
-        var result = await Dio().get(
-            'https://pokeapi.co/api/v2/pokemon/${0 + Random().nextInt(1080 - 0)}');
-        if (result.statusCode == 200) {
-          var json = result.data;
-          aux.add(PokemonModel.fromMap(json));
-          sleep(const Duration(milliseconds: 500));
-        } else if (result.statusCode == 404) {
-          throw PokemonSearchException(message: 'Não Encontrado');
-        } else {
-          throw Exception();
+    try {
+      var result = await Dio().get(
+          'https://pokeapi.co/api/v2/pokemon?limit=4&offset=${0 + Random().nextInt(1076 - 0)}');
+      if (result.statusCode == 200) {
+        var json = result.data['results'];
+        List<PokemonModel> listPokemon = [];
+        for (var pokemon in json) {
+          listPokemon.add(await pokemonSearchByName(
+              ParamsSearchPokemon(nameText: pokemon['name'])));
         }
-      } catch (e) {
-        throw PokemonSearchException(message: e.toString());
+        return listPokemon;
+      } else if (result.statusCode == 404) {
+        throw PokemonSearchException(message: 'Não Encontrado');
+      } else {
+        throw Exception();
       }
+    } catch (e) {
+      throw PokemonSearchException(message: e.toString());
     }
-    return aux;
   }
 }

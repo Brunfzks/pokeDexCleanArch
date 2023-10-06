@@ -1,0 +1,4 @@
+#Tue Aug 15 19:55:41 BRT 2023
+base.0=E\:\\GitHub\\pokeDexCleanArch\\poke_clean_arch\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
